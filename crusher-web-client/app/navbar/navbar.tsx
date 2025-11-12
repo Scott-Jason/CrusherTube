@@ -29,9 +29,9 @@ export default function Navbar(){
             <Link href="/">
                 <Image width={90} height={80} src="/climb.svg" alt="climb logo"/>                
             </Link>
-            
-            <Upload />
-            
+            {
+              user && <Upload />
+            }
             <SignIn user={user}/>
             
         </nav>
