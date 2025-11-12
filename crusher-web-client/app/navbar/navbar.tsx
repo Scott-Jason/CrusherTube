@@ -3,6 +3,7 @@
 import Image from "next/image";
 import styles from "./navbar.module.css";
 import Link from "next/link";
+import Upload from "./upload"
 
 import SignIn from "./sign-in"
 import { onAuthStateChangedHelper } from "../firebase/firebase";
@@ -28,6 +29,9 @@ export default function Navbar(){
             <Link href="/">
                 <Image width={90} height={80} src="/climb.svg" alt="climb logo"/>                
             </Link>
+            
+            <Upload />
+            
             <SignIn user={user}/>
             
         </nav>
