@@ -1,5 +1,6 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
+import { getFunctions } from "firebase/functions";
 import { 
     getAuth, 
     signInWithPopup, 
@@ -18,6 +19,9 @@ const firebaseConfig = {
 
 // Initialize Firebase
 export const app = initializeApp(firebaseConfig);
+
+//make sure initialize app runs before getVideos
+export const functions = getFunctions(app);
 
 //Initiliaze firebase auth
 const auth = getAuth(app);
